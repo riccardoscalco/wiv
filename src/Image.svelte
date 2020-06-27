@@ -23,4 +23,12 @@
 	onMount(readAndPreview);
 </script>
 
-<img alt="just an" width="300px" src={src}>
+<img alt="just an" src={src}>
+
+<style>
+	img {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+</style>
