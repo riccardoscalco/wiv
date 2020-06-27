@@ -10,10 +10,9 @@
 
 			reader.addEventListener("load", function () {
 				var image = new Image();
-				image.height = 100;
-				image.title = file.name;
+				// image.height = 100;
+				// image.title = file.name;
 				image.src = this.result;
-				// preview.appendChild( image );
 				src = image.src;
 			}, false);
 
@@ -24,4 +23,4 @@
 	onMount(readAndPreview);
 </script>
 
-<img width="300px" src={src}>
+<img alt="just an" width="300px" src={src}>
