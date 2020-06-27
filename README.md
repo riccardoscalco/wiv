@@ -1,4 +1,4 @@
-**Wiv** is a web image viewer, you can view images local images in your browser.
+**Wiv** is a web image viewer. Display local images in your browser at https://wiv.vercel.app/.
 
 My TODO list:
 
