@@ -1,3 +1,15 @@
+**Wiv** is a web image viewer, you can view images local images in your browser.
+
+My TODO list:
+
+* Clean readme
+* Deploying to the web
+* Clean style
+* Add more functionalities..
+* ...
+
+---
+
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
