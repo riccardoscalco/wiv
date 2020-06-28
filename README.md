@@ -34,6 +34,6 @@ You can run the newly built app with `npm run start`.
 
 ---
 
-*This project is [Svelte](https://svelte.dev) app.*
+*Wiv is a [Svelte](https://svelte.dev) app.*
 
 
