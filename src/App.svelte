@@ -4,7 +4,8 @@
 </script>
 
 <main>
-	<input type="file" bind:files multiple>
+	<input id="file" type="file" bind:files multiple>
+	<label for="file">Select some images</label>
 	<ul>
 		{#each files as file}
 			<li>
@@ -15,13 +16,34 @@
 </main>
 
 <style>
-	input {
-		margin: 0;
-		padding: 0;
+	[type="file"] {
 		border: 0;
+		clip: rect(0, 0, 0, 0);
+		height: 1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute !important;
+		white-space: nowrap;
+		width: 1px;
 	}
+ 
+	[type="file"] + label {
+		user-select: none;
+		border-radius: 2px;
+		background-color: var(--black);
+		color: var(--white);
+		cursor: pointer;
+		display: inline-block;
+		padding: 10px;
+	}
+
+	/* [type="file"]:focus + label,
+	[type="file"] + label:hover {
+		
+	} */
+
 	ul {
-		border-top: 1px solid #ddd;
+		border-top: 1px solid var(--black);
 		list-style: none;
 		margin: 20px 0;
 		padding: 20px 0 0 0;
