@@ -1,18 +1,14 @@
 <script>
 	import Image from './Image.svelte';
-	let images = [];
-
-	function previewFiles () {
-		images = document.querySelector('input[type=file]').files;
-	}
+	let files = [];
 </script>
 
 <main>
-	<input id="browse" type="file" on:change={previewFiles} multiple><br>
+	<input type="file" bind:files multiple>
 	<ul>
-		{#each images as image}
+		{#each files as file}
 			<li>
-				<Image file={image}/>
+				<Image file={file}/>
 			</li>
 		{/each}
 	</ul>
