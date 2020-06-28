@@ -6,18 +6,15 @@
 	let name;
 
 	function readAndPreview () {
-		// Make sure `file.name` matches our extensions criteria
-		if ( /\.(jpe?g|png|gif|svg)$/i.test(file.name) ) {
-			const reader = new FileReader();
+		const reader = new FileReader();
 
-			reader.addEventListener("load", function () {
-				name = file.name;
-				size = file.size;
-				src = this.result;
-			}, false);
+		reader.addEventListener("load", function () {
+			name = file.name;
+			size = file.size;
+			src = this.result;
+		}, false);
 
-			reader.readAsDataURL(file);
-		}
+		reader.readAsDataURL(file);
 	}
 
 	function format (bytes) {

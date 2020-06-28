@@ -4,7 +4,7 @@
 </script>
 
 <main>
-	<input id="file" type="file" bind:files multiple>
+	<input id="file" type="file" accept="image/*" bind:files multiple>
 	<label for="file">Select some images</label>
 	<ul>
 		{#each files as file}
