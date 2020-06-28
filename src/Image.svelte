@@ -1,6 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 	export let file;
+	let visible = false;
 	let src;
 	let size;
 	let name;
@@ -12,6 +14,7 @@
 			name = file.name;
 			size = file.size;
 			src = this.result;
+			visible = true;
 		}, false);
 
 		reader.readAsDataURL(file);
@@ -26,11 +29,13 @@
 	onMount(readAndPreview);
 </script>
 
-<article>
-	<img alt={name} src={src}/>
-	<p>{name}</p>
-	<p>{format(size)}</p>
-</article>
+{#if visible}
+	<article transition:fade>
+		<img alt={name} src={src}/>
+		<p>{name}</p>
+		<p>{format(size)}</p>
+	</article>
+{/if}
 
 <style>
 	article {
