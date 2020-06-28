@@ -30,7 +30,7 @@
 </script>
 
 <article>
-	<img alt="just an" src={src}/>
+	<img alt={name} src={src}/>
 	<p>{name}</p>
 	<p>{format(size)}</p>
 </article>
