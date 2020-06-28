@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	export let file;
+	export let index;
 	let visible = false;
 	let src;
 	let size;
@@ -30,7 +31,7 @@
 </script>
 
 {#if visible}
-	<article transition:fade>
+	<article transition:fade={{ delay: index * 35}}>
 		<img alt={name} src={src}/>
 		<p>{name}</p>
 		<p>{format(size)}</p>

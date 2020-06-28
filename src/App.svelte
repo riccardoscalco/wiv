@@ -7,9 +7,9 @@
 	<input id="file" type="file" accept="image/*" bind:files multiple>
 	<label for="file">Select some images</label>
 	<ul>
-		{#each files as file}
+		{#each files as file, index}
 			<li>
-				<Image file={file}/>
+				<Image file={file} index={index}/>
 			</li>
 		{/each}
 	</ul>
