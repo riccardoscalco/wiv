@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-	--black: #131313;
+	--black: #1d2b47;
 	--white:#fff;
+	--primary-color: #0A0AFF;
+	--light-gray: #eee;
+	--almost-white: #f6f7f7;
 }
 
 html, body {

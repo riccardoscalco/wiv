@@ -5,7 +5,7 @@
 
 <main>
 	<input id="file" type="file" accept="image/*" bind:files multiple>
-	<label for="file">Select some images</label>
+	<label for="file">∙</label>
 	<ul>
 		{#each files as file, index}
 			<li>
@@ -29,12 +29,15 @@
  
 	[type="file"] + label {
 		user-select: none;
-		border-radius: 2px;
-		background-color: var(--black);
-		color: var(--white);
+		border-radius: 1px;
+		background-color: var(--light-gray);
+		color: var(--black);
 		cursor: pointer;
-		display: inline-block;
-		padding: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
 	}
 
 	/* [type="file"]:focus + label,
@@ -42,17 +45,20 @@
 		
 	} */
 
+	[type="file"] + label:hover	 {
+		background-color: var(--almost-white);
+	}
+
 	ul {
-		border-top: 1px solid var(--black);
 		list-style: none;
-		margin: 20px 0;
-		padding: 20px 0 0 0;
+		padding: 10px 0 0 0;
 		max-width: 100vw;
 		display: grid;
 		grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
 		column-gap: 20px;
 		row-gap: 20px;
 	}
+
 	li {
 		padding: 0;
 		margin: 0;

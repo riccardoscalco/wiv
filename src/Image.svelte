@@ -1,12 +1,15 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
+	import DownloadAnchor from './DownloadAnchor.svelte';
 	export let file;
 	export let index;
 	let visible = false;
 	let src;
 	let size;
 	let name;
+	let width = 300;
+	let height = 300;
 
 	function readAndPreview () {
 		const reader = new FileReader();
@@ -15,6 +18,12 @@
 			name = file.name;
 			size = file.size;
 			src = this.result;
+			const image = new Image();
+			image.src = src;
+			image.onload = function () {
+				width = this.width;
+				height = this.height;
+			}
 			visible = true;
 		}, false);
 
@@ -34,7 +43,21 @@
 	<article transition:fade={{ delay: index * 35}}>
 		<img alt={name} src={src}/>
 		<p>{name}</p>
-		<p>{format(size)}</p>
+		<p>{format(size)} - {width}×{height} pixel</p>
+		<DownloadAnchor
+			src={src}
+			download={name}
+			width={width}
+			height={height}
+		>{width}</DownloadAnchor>
+		{#if width > 1080}
+			<DownloadAnchor
+				src={src}
+				download={name}
+				width="1080"
+				height="1080"
+			>1080</DownloadAnchor>
+		{/if}
 	</article>
 {/if}
 
@@ -45,8 +68,9 @@
 
 	img {
 		width: 100%;
-		padding: 0;
-		margin: 0;
+		padding: 1px;
+		margin: 0 0 5px 0;
+		border: 1px solid var(--light-gray);
 	}
 
 	p {
