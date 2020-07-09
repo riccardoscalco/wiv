@@ -4,8 +4,8 @@
 </script>
 
 <header>
-	<Input/>
-	<Resetter/>
+	<Input />
+	<Resetter />
 </header>
 
 <style>

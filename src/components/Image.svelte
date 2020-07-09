@@ -11,26 +11,30 @@
 	let width = 300;
 	let height = 300;
 
-	function readAndPreview () {
+	function readAndPreview() {
 		const reader = new FileReader();
 
-		reader.addEventListener("load", function () {
-			name = file.name;
-			size = file.size;
-			src = this.result;
-			const image = new Image();
-			image.src = src;
-			image.onload = function () {
-				width = this.width;
-				height = this.height;
-			}
-			visible = true;
-		}, false);
+		reader.addEventListener(
+			'load',
+			function () {
+				name = file.name;
+				size = file.size;
+				src = this.result;
+				const image = new Image();
+				image.src = src;
+				image.onload = function () {
+					width = this.width;
+					height = this.height;
+				};
+				visible = true;
+			},
+			false
+		);
 
 		reader.readAsDataURL(file);
 	}
 
-	function format (bytes) {
+	function format(bytes) {
 		// International System of Units (1000 bytes = 1 kB)
 		const k = 1000;
 		return `${(bytes / k).toFixed(1)} kB`;
@@ -40,23 +44,17 @@
 </script>
 
 {#if visible}
-	<article transition:fade={{ delay: index * 35}}>
-		<img alt={name} src={src}/>
+	<article transition:fade="{{ delay: index * 35 }}">
+		<img alt="{name}" {src} />
 		<p>{name}</p>
 		<p>{format(size)} - {width}×{height} pixel</p>
-		<DownloadAnchor
-			src={src}
-			download={name}
-			width={width}
-			height={height}
-		>{width}</DownloadAnchor>
+		<DownloadAnchor {src} download="{name}" {width} {height}>
+			{width}
+		</DownloadAnchor>
 		{#if width > 1080}
-			<DownloadAnchor
-				src={src}
-				download={name}
-				width="1080"
-				height="1080"
-			>1080</DownloadAnchor>
+			<DownloadAnchor {src} download="{name}" width="1080" height="1080">
+				1080
+			</DownloadAnchor>
 		{/if}
 	</article>
 {/if}

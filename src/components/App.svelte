@@ -3,7 +3,7 @@
 	import Images from './Images.svelte';
 </script>
 
-<Header/>
+<Header />
 <main>
-	<Images/>
+	<Images />
 </main>

@@ -6,9 +6,7 @@
 	}
 </script>
 
-<button on:click={reset}>
-	|
-</button>
+<button on:click="{reset}">|</button>
 
 <style>
 	button {

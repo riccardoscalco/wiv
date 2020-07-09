@@ -1,15 +1,21 @@
 <script>
 	import { images } from '../stores.js';
 
-	function onChangeHandler () {
-		images.update(state => [...this.files, ...state]);
+	function onChangeHandler() {
+		images.update((state) => [...this.files, ...state]);
 	}
 </script>
 
 <form>
 	<label>
 		∙
-		<input id="file" type="file" accept="image/*" on:change={onChangeHandler} multiple>
+		<input
+			id="file"
+			type="file"
+			accept="image/*"
+			on:change="{onChangeHandler}"
+			multiple
+		/>
 	</label>
 </form>
 
@@ -24,7 +30,7 @@
 		white-space: nowrap;
 		width: 1px;
 	}
- 
+
 	label {
 		user-select: none;
 		border-radius: 1px;

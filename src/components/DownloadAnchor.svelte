@@ -6,22 +6,24 @@
 	let canvasElement;
 
 	// https://gist.github.com/mbostock/6466603
-	function clickListener () {
-		const context = canvasElement.getContext("2d");
-		const image = new Image;
+	function clickListener() {
+		const context = canvasElement.getContext('2d');
+		const image = new Image();
 		image.src = src;
-		image.onload = function() {
+		image.onload = function () {
 			context.drawImage(image, 0, 0, width, height);
-			const a = document.createElement("a");
+			const a = document.createElement('a');
 			a.download = download.replace('.svg', '.png');
-			a.href = canvasElement.toDataURL("image/png");
+			a.href = canvasElement.toDataURL('image/png');
 			a.click();
-		}
+		};
 	}
 </script>
 
-<button on:click={clickListener}><slot></slot></button>
-<canvas width={width} height={height} bind:this={canvasElement}></canvas>
+<button on:click="{clickListener}">
+	<slot />
+</button>
+<canvas {width} {height} bind:this="{canvasElement}"></canvas>
 
 <style>
 	button {
