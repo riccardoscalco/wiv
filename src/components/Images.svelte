@@ -3,16 +3,14 @@
 	import { images } from '../stores.js';
 </script>
 
-<ul>
+<section>
 	{#each $images as file, index (file.name)}
-		<li>
-			<Image {file} {index} />
-		</li>
+		<Image {file} {index} />
 	{/each}
-</ul>
+</section>
 
 <style>
-	ul {
+	section {
 		list-style: none;
 		padding: 10px 0 0 0;
 		max-width: 100vw;
@@ -20,10 +18,5 @@
 		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 		column-gap: 20px;
 		row-gap: 20px;
-	}
-
-	li {
-		padding: 0;
-		margin: 0;
 	}
 </style>

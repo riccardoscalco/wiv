@@ -8,6 +8,12 @@
 	--almost-white: #f6f7f7;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 html, body {
 	position: relative;
 	width: 100%;
