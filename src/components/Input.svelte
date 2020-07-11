@@ -1,8 +1,8 @@
 <script>
-	import { images } from '../stores.js';
+	import { selections } from '../stores.js';
 
 	function onChangeHandler() {
-		images.update((state) => [...this.files, ...state]);
+		selections.update((state) => [[...this.files], ...state]);
 	}
 </script>
 

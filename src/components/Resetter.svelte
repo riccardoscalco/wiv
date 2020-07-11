@@ -1,8 +1,8 @@
 <script>
-	import { images } from '../stores.js';
+	import { selections } from '../stores.js';
 
 	function reset() {
-		images.set([]);
+		selections.set([]);
 	}
 </script>
 
