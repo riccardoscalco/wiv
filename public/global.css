@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+@font-face {
+	font-family: 'Courier Prime';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url("./fonts/Courier Prime.ttf");
+}
 
 :root {
 	--black: #1d2b47;
