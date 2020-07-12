@@ -1,12 +1,15 @@
 <script>
-	import { selections } from '../stores.js';
+	import { size, selections } from '../stores.js';
 
-	function reset() {
-		selections.set([]);
+	function resize() {
+		if ($selections.length === 0) {
+			return;
+		}
+		$size === 500 ? size.set(250) : size.set(500);
 	}
 </script>
 
-<button on:click="{reset}">|</button>
+<button on:click="{resize}">/</button>
 
 <style>
 	button {

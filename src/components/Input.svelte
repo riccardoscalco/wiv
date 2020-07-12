@@ -38,7 +38,7 @@
 		user-select: none;
 		border-radius: 1px;
 		background-color: var(--light-gray);
-		color: var(--black);
+		color: var(--primary-color);
 		cursor: pointer;
 		display: flex;
 		align-items: center;
