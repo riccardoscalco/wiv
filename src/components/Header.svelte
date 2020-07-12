@@ -12,7 +12,6 @@
 	header {
 		width: 100%;
 		display: grid;
-		/* grid-template-columns: repeat( auto-fill, minmax(40px, 1fr) ); */
 		grid-template-columns: repeat(2, max-content);
 		column-gap: 10px;
 	}

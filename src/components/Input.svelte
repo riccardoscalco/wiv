@@ -2,7 +2,10 @@
 	import { selections } from '../stores.js';
 
 	function onChangeHandler() {
-		selections.update((state) => [[...this.files], ...state]);
+		selections.update((state) => [
+			{ id: Date.now(), selection: [...this.files] },
+			...state,
+		]);
 	}
 </script>
 

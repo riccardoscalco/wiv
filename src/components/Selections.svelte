@@ -4,7 +4,7 @@
 </script>
 
 <section>
-	{#each $selections as images}
-		<Images {images} />
+	{#each $selections as images (images.id)}
+		<Images images="{images.selection}" />
 	{/each}
 </section>
