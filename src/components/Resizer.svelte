@@ -5,7 +5,7 @@
 		if ($selections.length === 0) {
 			return;
 		}
-		$size === 500 ? size.set(250) : size.set(500);
+		$size === 500 ? size.set(240) : size.set(500);
 	}
 </script>
 

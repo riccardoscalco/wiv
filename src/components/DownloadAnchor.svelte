@@ -30,7 +30,7 @@
 		font-family: inherit;
 		font-size: inherit;
 		padding: 4px 8px;
-		margin: 5px 0 0 0;
+		margin: 3px 0 0 0;
 		border: 0;
 		border-radius: 1px;
 		background-color: var(--light-gray);

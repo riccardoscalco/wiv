@@ -32,7 +32,8 @@ body {
 	padding: 20px;
 	box-sizing: border-box;
 	font-family: 'Courier Prime', monospace;
-	font-size: 12px;
+	font-size: 11px;
+	line-height: 15px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-text-size-adjust: 100%;

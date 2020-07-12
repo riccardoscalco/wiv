@@ -76,7 +76,5 @@
 		overflow-wrap: break-word;
 		margin: 0;
 		padding: 0;
-		font-size: 12px;
-		line-height: calc(12px * 1.5);
 	}
 </style>
