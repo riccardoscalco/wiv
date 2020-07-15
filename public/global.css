@@ -22,14 +22,11 @@
 
 html, body {
 	position: relative;
-	width: 100%;
-	height: 100%;
+	overflow-x: hidden;
 }
 
 body {
 	color: var(--black);
-	margin: 0;
-	padding: 20px;
 	box-sizing: border-box;
 	font-family: 'Courier Prime', monospace;
 	font-size: 11px;

@@ -44,7 +44,7 @@
 </script>
 
 {#if visible}
-	<article in:fade="{{ delay: index * 35 }}">
+	<article>
 		<img alt="{name}" {src} />
 		<p>{name}</p>
 		<p>{format(size)} - {width}×{height} pixel</p>
