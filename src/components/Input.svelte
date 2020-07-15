@@ -1,11 +1,12 @@
 <script>
-	import { selections } from '../stores.js';
+	import { selections, showHelp } from '../stores.js';
 
 	function onChangeHandler() {
 		selections.update((state) => [
 			...state,
 			{ id: Date.now(), selection: [...this.files] },
 		]);
+		showHelp.set(false);
 	}
 </script>
 
