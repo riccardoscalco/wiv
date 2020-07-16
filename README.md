@@ -1,7 +1,6 @@
 **Wiv** is a web image viewer. Display local images in your browser at https://wiv.vercel.app/.
 
-<img src="./screen1.png" style="width: 100%;">
-<img src="./screen2.png" style="width: 100%;">
+<img src="./screen.png" style="width: 100%;">
 
 ## Get started
 
