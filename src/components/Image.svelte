@@ -3,7 +3,6 @@
 	import { fade } from 'svelte/transition';
 	import DownloadAnchor from './DownloadAnchor.svelte';
 	export let file;
-	export let index;
 	let visible = false;
 	let src;
 	let size;

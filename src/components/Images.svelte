@@ -18,8 +18,8 @@
 	style="grid-template-columns: repeat(auto-fill, minmax({$size}px, 1fr));"
 	id="selection-{index}"
 >
-	{#each images as file, index (file.name)}
-		<Image {file} {index} />
+	{#each images as file (file.name)}
+		<Image {file} />
 	{/each}
 </section>
 
