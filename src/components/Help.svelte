@@ -5,20 +5,20 @@
 <section style="z-index: {$zIndex};">
 	<div>
 		<p>
-			<span>a</span>
+			<span>h</span>
+			: show help
+		</p>
+		<p>
+			<span>s</span>
 			: select new images
 		</p>
 		<p>
 			<span>c</span>
-			: clear selections
+			: clear screen
 		</p>
 		<p>
 			<span>t</span>
 			: toggle image size
-		</p>
-		<p>
-			<span>h</span>
-			: show commands
 		</p>
 	</div>
 </section>
@@ -36,6 +36,12 @@
 
 	p {
 		padding: 8px 0;
+	}
+
+	p:first-child {
+		border-bottom: 1px solid var(--light-gray);
+		padding-bottom: 15px;
+		margin-bottom: 5px;
 	}
 
 	span {

@@ -24,7 +24,7 @@
 
 	function handleKeydown(event) {
 		switch (event.key) {
-			case 'a':
+			case 's':
 				document.getElementById('file').click();
 				break;
 			case 'c':
