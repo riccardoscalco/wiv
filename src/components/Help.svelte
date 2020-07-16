@@ -20,6 +20,9 @@
 			<span>t</span>
 			: toggle image size
 		</p>
+		<p>
+			<a href="https://github.com/riccardoscalco/wiv">View on Github</a>
+		</p>
 	</div>
 </section>
 
@@ -42,6 +45,14 @@
 		border-bottom: 1px solid var(--light-gray);
 		padding-bottom: 15px;
 		margin-bottom: 5px;
+	}
+
+	p:last-child {
+		margin-top: 10px;
+	}
+
+	a {
+		color: var(--primary-color);
 	}
 
 	span {
