@@ -21,6 +21,7 @@
 			: toggle image size
 		</p>
 		<p>
+			MIT License |
 			<a href="https://github.com/riccardoscalco/wiv">View on Github</a>
 		</p>
 	</div>
@@ -48,7 +49,9 @@
 	}
 
 	p:last-child {
-		margin-top: 10px;
+		position: absolute;
+		bottom: 10px;
+		right: 20px;
 	}
 
 	a {
